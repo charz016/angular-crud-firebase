@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutModule } from './layout/layout.module';
-import { LayoutComponent } from './layout/layout.component';
 import { HomeModule } from './components/home/home.module';
 import { HomeComponent } from './components/home/home.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { NavBarModule } from './components/nav-bar/nav-bar.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    component: NavBarComponent,
     children: [
       {
         path: '',
@@ -41,7 +41,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), LayoutModule, HomeModule],
+  imports: [RouterModule.forRoot(routes), NavBarModule,HomeModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

@@ -1,1 +1,11 @@
-<p>list-user works!</p>
+<div fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="end center" class="page-toolbar">
+        <button (click)="createUser()" mat-flat-button color="accent">
+            Crear usuario
+        </button>
+    </div>
+
+    <div >
+        <user-table [users]="users"></user-table>
+    </div>
+</div>

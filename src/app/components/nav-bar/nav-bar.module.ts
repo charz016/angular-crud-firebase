@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout.component';
+import { NavBarComponent } from './nav-bar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,7 +10,11 @@ import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 
+
 @NgModule({
+  declarations: [
+    NavBarComponent
+  ],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -20,9 +24,8 @@ import { MatDividerModule } from '@angular/material/divider';
     FlexLayoutModule,
     MatListModule,
     MatDividerModule,
-    RouterModule],
-  declarations: [LayoutComponent],
-  exports: [LayoutComponent],
+    RouterModule
+  ],
+  exports:[NavBarComponent]
 })
-export class LayoutModule { }
-
+export class NavBarModule { }
