@@ -10,24 +10,19 @@ import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 
-const COMMON_MODULES = [
-  CommonModule,
-  MatToolbarModule,
-  MatSidenavModule,
-  MatButtonModule,
-  MatIconModule,
-  FlexLayoutModule,
-  MatListModule,
-  MatDividerModule,
-];
-
-const COMMON_DECLARATIONS = [LayoutComponent];
-
 @NgModule({
-  imports: [COMMON_MODULES, RouterModule],
-  declarations: COMMON_DECLARATIONS,
-  exports: COMMON_DECLARATIONS,
+  imports: [
+    CommonModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    FlexLayoutModule,
+    MatListModule,
+    MatDividerModule,
+    RouterModule],
+  declarations: [LayoutComponent],
+  exports: [LayoutComponent],
 })
-export class LayoutModule {}
+export class LayoutModule { }
 
-export default { COMMON_DECLARATIONS, COMMON_MODULES };

@@ -15,6 +15,27 @@ const routes: Routes = [
         pathMatch: 'full',
         component: HomeComponent,
       },
+      {
+        path: 'users',
+        loadChildren: () =>
+          import('./features/user/user.module').then(
+            m => m.UserModule
+          ),
+      },
+      {
+        path: 'office',
+        loadChildren: () =>
+          import('./features/office/office.module').then(
+            m => m.OfficeModule
+          ),
+      },
+      {
+        path: 'product',
+        loadChildren: () =>
+          import('./features/product/product.module').then(
+            m => m.ProductModule
+          ),
+      },
     ],
   },
 ];
@@ -23,4 +44,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes), LayoutModule, HomeModule],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
