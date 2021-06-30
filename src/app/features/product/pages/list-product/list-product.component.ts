@@ -3,6 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 import { CreateProductComponent } from '../../dialogs/create-product/create-product.component';
+import { DeleteProductComponent } from '../../dialogs/delete-product/delete-product.component';
+import { UpdateProductComponent } from '../../dialogs/update-product/update-product.component';
 
 @Component({
   selector: 'list-product',
@@ -33,10 +35,12 @@ export class ListProductPage implements OnInit {
   }
 
   updateProduct(product: Product) {
+    this.dialog.open(UpdateProductComponent,{ data: { product } })
 
   }
 
   deleteProduct(id: string) {
+    this.dialog.open(DeleteProductComponent,{ data: { id } });
 
   }
 

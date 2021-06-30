@@ -7,6 +7,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CreateProductModule } from '../../dialogs/create-product/create-product.module';
 import { DeleteProductModule } from '../../dialogs/delete-product/delete-product.module';
 import { ProductTableModule } from '../../components/product-table/product-table.module';
+import { UpdateProductModule } from '../../dialogs/update-product/update-user.module';
 
 
 
@@ -22,6 +23,7 @@ import { ProductTableModule } from '../../components/product-table/product-table
     MatDialogModule,
     CreateProductModule,
     DeleteProductModule,
+    UpdateProductModule,
     ProductTableModule,
   ],
   exports:[

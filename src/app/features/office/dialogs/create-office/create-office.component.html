@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Crear Sucursal</h1>
+<ng-container>
+    <mat-dialog-content>
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="form" fxLayout="column" fxLayoutAlign="start stretch">
+            <div>
+                <mat-form-field>
+                    <mat-label>Nombre</mat-label>
+                    <input name="name" matInput formControlName="name" />
+                    <mat-error>
+                        <span *ngIf="form.hasError('required', 'name')">
+                            campo requerido
+                        </span>
+
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <button hidden #submitButton></button>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+        <button mat-dialog-close mat-button>
+            Cerrar
+        </button>
+        <button mat-flat-button color="accent" (click)="submitButton.click()">
+            Crear
+        </button>
+    </mat-dialog-actions>
+</ng-container>

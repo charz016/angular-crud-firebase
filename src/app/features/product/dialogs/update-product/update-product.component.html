@@ -10,7 +10,6 @@
                     <span *ngIf="form.hasError('required', 'name')">
                         campo requerido
                     </span>
-
                 </mat-error>
             </mat-form-field>
             <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.gt-sm="12px">
@@ -26,21 +25,6 @@
                     </mat-error>
                 </mat-form-field>
             </div>
-
-            <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.gt-sm="12px">
-                <mat-form-field fxFlex.gt-sm>
-                    <mat-label>
-                        Contraseña
-                    </mat-label>
-                    <input name="password" formControlName="password" matInput type="password" />
-                    <mat-error>
-                        <span *ngIf="form.hasError('required', 'password')">
-                            requerido
-                        </span>
-                    </mat-error>
-                </mat-form-field>
-            </div>
-
             <button hidden #submitButton></button>
         </form>
 

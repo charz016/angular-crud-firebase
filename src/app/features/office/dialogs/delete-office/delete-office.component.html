@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Eliminar sucursal</h1>
+<ng-container>
+    <mat-dialog-content>
+    <h1>¿Desea eliminar la sucursal?</h1>
+    </mat-dialog-content>
+    <mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+        <button mat-dialog-close mat-button>
+            Cerrar
+        </button>
+        <button mat-flat-button color="accent" (click)="onSubmit()">
+            Aceptar
+        </button>
+    </mat-dialog-actions>
+</ng-container>
