@@ -12,4 +12,9 @@ export class ListProductPage implements OnInit {
   ngOnInit(): void {
   }
 
+  
+  createProduct() {
+
+  }
+
 }

@@ -19,7 +19,7 @@ export class UserService {
   getUserList() {
     return this.angularFirestore
       .collection("user-collection")
-      .valueChanges();
+      .snapshotChanges();
   }
 
   createUser(user: User) {
@@ -28,10 +28,10 @@ export class UserService {
       .add(user)
   }
 
-  deleteUser(user: User) {
+  deleteUser(id: string) {
     return this.angularFirestore
       .collection("user-collection")
-      .doc(user.id)
+      .doc(id)
       .delete();
   }
 

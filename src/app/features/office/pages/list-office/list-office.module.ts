@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListOfficePage } from './list-office.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -9,7 +11,9 @@ import { ListOfficePage } from './list-office.component';
     ListOfficePage
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FlexLayoutModule,
+    MatButtonModule,
   ],
   exports:[
     ListOfficePage

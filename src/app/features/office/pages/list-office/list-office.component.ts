@@ -12,4 +12,8 @@ export class ListOfficePage implements OnInit {
   ngOnInit(): void {
   }
 
+  createOffice(){
+    
+  }
+
 }

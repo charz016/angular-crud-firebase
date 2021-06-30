@@ -5,7 +5,8 @@
         </button>
     </div>
 
-    <div >
-        <user-table [users]="users"></user-table>
+    <div>
+        <user-table [users]="users" (delete)="deleteUser($event)" (update)="UpdateUser($event)">
+        </user-table>
     </div>
 </div>

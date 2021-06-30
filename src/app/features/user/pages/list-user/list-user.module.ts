@@ -5,6 +5,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { CreateUserModule } from '../../dialogs/create-user/create-user.module';
 import { UserTableModule } from '../../components/user-table/user-table.module';
+import { UpdateUserModule } from '../../dialogs/update-user/update-user.module';
+import { DeleteUserModule } from '../../dialogs/delete-user/delete-user.module';
 
 
 
@@ -18,6 +20,8 @@ import { UserTableModule } from '../../components/user-table/user-table.module';
     MatButtonModule,
     CreateUserModule,
     UserTableModule,
+    UpdateUserModule,
+    DeleteUserModule,
   ],
   exports:[
     ListUserPage

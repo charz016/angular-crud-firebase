@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListProductPage } from './list-product.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -9,7 +11,9 @@ import { ListProductPage } from './list-product.component';
     ListProductPage
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FlexLayoutModule,
+    MatButtonModule,
   ],
   exports:[
     ListProductPage

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { User } from 'src/app/models/user';
 
 @Component({
@@ -10,23 +10,30 @@ export class UserTableComponent implements OnInit {
 
   @Input() users: User[] = [];
 
+  @Output() update = new EventEmitter<User>();
+
+  @Output() delete = new EventEmitter<string>();
+
+
 
   displayedColumns = [
     'name',
     'user',
     'actions',
-];
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onUpdate(e: any) {
+  onUpdate(user: User) {
+    this.update.emit(user);
 
   }
 
-  onDelete(e: any) {
+  onDelete(id: string) {
+    this.delete.emit(id);
 
   }
 
