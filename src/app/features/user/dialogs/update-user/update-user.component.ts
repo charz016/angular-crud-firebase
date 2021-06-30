@@ -27,13 +27,14 @@ export class UpdateUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.data.user);
-    
+    this.form.patchValue({
+      ...this.data.user
+    })    
   }
 
   onSubmit() {
     if (this.form.invalid) return;
-    this.userService.updateUser(this.form.value, "123123").then(() => {
+    this.userService.updateUser(this.form.value, this.data.user.id).then(() => {
       this.dialogRef.close();
     })
   }

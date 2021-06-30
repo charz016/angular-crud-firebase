@@ -5,7 +5,8 @@
         </button>
     </div>
 
-    <div >
-        
+    <div>
+        <product-table [products]="products" (delete)="deleteProduct($event)" (update)="updateProduct($event)">
+        </product-table>
     </div>
 </div>

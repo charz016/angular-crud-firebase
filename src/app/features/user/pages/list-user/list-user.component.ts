@@ -39,8 +39,8 @@ export class ListUserPage implements OnInit {
     this.dialog.open(UpdateUserComponent, { data: { user } });
   }
 
-  deleteUser(id:string){
-    this.dialog.open(DeleteUserComponent)
+  deleteUser(id: string) {
+    this.dialog.open(DeleteUserComponent, { data: { id } })
   }
 
 }
